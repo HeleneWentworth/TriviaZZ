@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TriviaZ</string>
+
+    <string name="play_button">Play</string>
+
+<string name="home_fragment">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="game_fragment">Home Screen</string>
+
+    <!--    <string name="home_fragment">Title </string>-->
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="game_question">This is where the question will be</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
+

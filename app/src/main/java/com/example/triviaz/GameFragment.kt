@@ -11,7 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import com.example.triviaz.databinding.FragmentGameBinding
 import com.example.triviaz.databinding.FragmentHomeBinding
-import com.example.triviaz.databinding.FragmentTitleBinding
+
 
 class GameFragment : Fragment() {
 
@@ -23,7 +23,7 @@ class GameFragment : Fragment() {
 
         val binding: FragmentGameBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_game, container, false)
         binding.submitButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_gameFragment_to_titleFragment)
+            Navigation.createNavigateOnClickListener(R.id.action_gameFragment_to_homeFragment)
         )
 
         return binding.root

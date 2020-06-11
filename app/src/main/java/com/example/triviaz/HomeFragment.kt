@@ -14,7 +14,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.triviaz.databinding.FragmentHomeBinding
-import com.example.triviaz.databinding.FragmentTitleBinding
+
 
 class HomeFragment : Fragment() {
 
@@ -27,8 +27,21 @@ class HomeFragment : Fragment() {
         binding.catButton.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_gameFragment)
         )
+        val categoryList = generateDummyList(10)
+        binding.categoryList.adapter = CategoryAdapter(categoryList)
+        binding.categoryList.layoutManager = LinearLayoutManager(context)
+        binding.categoryList.setHasFixedSize(true)
 
         return binding.root
+    }
+
+    private  fun generateDummyList(size: Int):List<CategoryItem>{
+        val list = ArrayList<CategoryItem>()
+        for (i in 0 until size){
+            val item = CategoryItem("Category $1")
+            list += item
+        }
+        return  list
     }
 
 }

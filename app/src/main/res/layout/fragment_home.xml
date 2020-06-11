@@ -3,18 +3,16 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".HomeFragment"
-    >
-
+    tools:context=".HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
-        android:id="@+id/frameLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
 
         <!-- TODO: Update blank fragment layout -->
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
@@ -23,7 +21,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01999998" />
 
         <Button
             android:id="@+id/cat_button"
@@ -32,15 +31,22 @@
             android:text="Category"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintVertical_bias="0.058" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoryList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cat_button"
+            app:layout_constraintVertical_bias="0.120000005"
+            tools:layout_editor_absoluteX="1dp"
+            tools:listitem="@layout/category_item"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
 
 </layout>
